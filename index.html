@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<script src="./js/libraries/aframe/aframe.min.js"></script>
+		<script src="./js/libraries/aframe/aframe-pointcloud-component.min.js"></script>
+	</head>
+
+	<body>
+		<a-scene background="color: red">
+			<a-assets>
+				<img id="sky" src="https://cdn.glitch.com/4a49b2de-c469-4799-bcdc-9e1fbcde51fa%2Fsky.jpg?v=1588531860136">
+        <audio id="trees_snd" src="https://cdn.glitch.com/4a49b2de-c469-4799-bcdc-9e1fbcde51fa%2Fcherry_trees.mp3?v=1588530710373" preload="auto"></audio>
+			</a-assets>
+			
+			<a-sky src="#sky"></a-sky>
+
+      <a-entity
+        sound="src: #trees_snd; autoplay: true; loop: true">
+      </a-entity>
+
+      <a-pointcloud 
+				scale="0.1 0.1 0.1" 
+				position="0 0.08 -2.5" 
+				rotation="0 0 0" 
+				src="url(https://cdn.glitch.com/4a49b2de-c469-4799-bcdc-9e1fbcde51fa%2Fcherry_blossom_jail_2m_v002.ply?v=1588608563406)" 
+				size="0.06"
+        opacity="0.5">
+			</a-pointcloud>
+
+		</a-scene>	
+	</body>
+
+</html>
